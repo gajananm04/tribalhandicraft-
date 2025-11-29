@@ -13,8 +13,12 @@ Thumbs.db
 *.tmp
 *.temp
 
-# Node modules (if any)
+# React projects
+my-react-app/
+tribal-handicrafts/
+tribal-marketplace/
 node_modules/
+package*.json
 
 # Build directories
 dist/
