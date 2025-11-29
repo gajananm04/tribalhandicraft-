@@ -1,0 +1,21 @@
+# IDE files
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if any)
+node_modules/
+
+# Build directories
+dist/
+build/
