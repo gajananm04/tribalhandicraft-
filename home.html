@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribal Handicrafts - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-palette"></i>
+                <span>Tribal Handicrafts</span>
+            </div>
+            <div class="nav-menu">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="#" class="nav-link" onclick="showProducts()">Products</a>
+                <a href="#" class="nav-link" onclick="showAbout()">About</a>
+                <div class="user-menu">
+                    <span id="userWelcome">Welcome, Guest</span>
+                    <button onclick="logout()" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Authentic Tribal Handicrafts</h1>
+                <p>Support indigenous artisans and preserve cultural heritage through beautiful handcrafted items</p>
+                <button class="cta-btn" onclick="showProducts()">
+                    <i class="fas fa-shopping-bag"></i>
+                    Explore Products
+                </button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Our Platform?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Direct Support</h3>
+                        <p>Buy directly from tribal artisans and support their communities</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Authentic Products</h3>
+                        <p>All items are culturally verified and genuinely handcrafted</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Cultural Heritage</h3>
+                        <p>Preserve and promote traditional crafting techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productsSection" class="products-section" style="display: none;">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div id="productsGrid" class="products-grid"></div>
+            </div>
+        </section>
+
+        <section id="aboutSection" class="about-section" style="display: none;">
+            <div class="container">
+                <h2>About Our Mission</h2>
+                <p>We connect tribal artisans with global customers, ensuring fair trade and cultural preservation. Our platform provides a sustainable marketplace for authentic handicrafts while supporting indigenous communities.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
