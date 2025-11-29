@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Consultant Dashboard - Tribal Handicrafts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-palette"></i>
+                <span>Tribal Handicrafts</span>
+            </div>
+            <div class="nav-menu">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link active" onclick="showPendingVerification()">Pending Verification</a>
+                <a href="#" class="nav-link" onclick="showVerifiedProducts()">Verified Products</a>
+                <a href="#" class="nav-link" onclick="showGuidelines()">Guidelines</a>
+                <div class="user-menu">
+                    <span id="userWelcome">Welcome, Cultural Consultant</span>
+                    <button onclick="logout()" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h1>Cultural Consultant Dashboard</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-hourglass-half"></i>
+                    <div>
+                        <h3 id="pendingVerificationCount">0</h3>
+                        <p>Pending Verification</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3 id="verifiedCount">0</h3>
+                        <p>Verified Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-times-circle"></i>
+                    <div>
+                        <h3 id="rejectedVerificationCount">0</h3>
+                        <p>Rejected Verifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="pendingVerificationSection" class="section active">
+            <div class="section-header">
+                <h2>Products Pending Cultural Verification</h2>
+                <p class="section-description">Review products for cultural authenticity and accuracy</p>
+            </div>
+            <div id="pendingVerificationGrid" class="products-grid consultant-grid"></div>
+        </section>
+
+        <section id="verifiedProductsSection" class="section">
+            <div class="section-header">
+                <h2>Culturally Verified Products</h2>
+            </div>
+            <div id="verifiedProductsGrid" class="products-grid consultant-grid"></div>
+        </section>
+
+        <section id="guidelinesSection" class="section">
+            <div class="section-header">
+                <h2>Cultural Verification Guidelines</h2>
+            </div>
+            <div class="guidelines-content">
+                <div class="guideline-card">
+                    <h3><i class="fas fa-history"></i> Historical Accuracy</h3>
+                    <ul>
+                        <li>Verify traditional crafting techniques are accurately described</li>
+                        <li>Ensure cultural significance is properly explained</li>
+                        <li>Check for respectful representation of tribal heritage</li>
+                    </ul>
+                </div>
+                
+                <div class="guideline-card">
+                    <h3><i class="fas fa-palette"></i> Artistic Authenticity</h3>
+                    <ul>
+                        <li>Confirm use of traditional materials and methods</li>
+                        <li>Validate symbolic meanings and patterns</li>
+                        <li>Ensure proper attribution to specific tribes/regions</li>
+                    </ul>
+                </div>
+                
+                <div class="guideline-card">
+                    <h3><i class="fas fa-shield-alt"></i> Cultural Sensitivity</h3>
+                    <ul>
+                        <li>Check for appropriate use of sacred symbols</li>
+                        <li>Ensure respectful language in descriptions</li>
+                        <li>Verify no cultural appropriation concerns</li>
+                    </ul>
+                </div>
+                
+                <div class="guideline-card">
+                    <h3><i class="fas fa-check-double"></i> Verification Process</h3>
+                    <ul>
+                        <li>Review product description and cultural significance</li>
+                        <li>Examine product images for authenticity</li>
+                        <li>Provide detailed feedback for improvements</li>
+                        <li>Approve only when all criteria are met</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Verification Modal -->
+    <div id="verificationModal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close" onclick="closeVerificationModal()">&times;</span>
+            <div id="verificationModalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
