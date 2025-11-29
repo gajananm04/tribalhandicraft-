@@ -1,11 +1,17 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "functions": {},
-  "trailingSlash": false
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null
 }
+>>>>>>> e9584844e049fbaaac23750e323227a4a535fd95
+=======
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null
+}
+=======
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null
+}
+>>>>>>> e9584844e049fbaaac23750e323227a4a535fd95
